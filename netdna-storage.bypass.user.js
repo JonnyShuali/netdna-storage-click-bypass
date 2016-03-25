@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name          netdna-storage bypass clicker
-// @namespace     http://www.webmonkey.com
+// @namespace     https://github.com/RoeeM/netdna-storage-click-bypass
 // @description   Bypass the clicking on netdna-storage.
+// @updateURL     https://github.com/RoeeM/netdna-storage-click-bypass/raw/master/netdna-storage.bypass.user.js
+// @version       1
 // @include       http://netdna-storage.com/*
 // @include       http://www.netdna-storage.com/*
 // ==/UserScript==
