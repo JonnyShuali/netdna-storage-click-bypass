@@ -3,9 +3,19 @@
 // @namespace     https://github.com/JonnyShuali/netdna-storage-click-bypass
 // @description   Bypass the clicking on netdna-storage.
 // @updateURL     https://github.com/JonnyShuali/netdna-storage-click-bypass/raw/master/netdna-storage.bypass.user.js
-// @version       2
-// @include       http://netdna-storage.com/*
-// @include       http://www.netdna-storage.com/*
+// @version       3
+// @include       http://www.netdna-storage.com/f/*
+// @include       http://www.netdna-storage.com/step/*
+// @include       http://netdna-storage.com/f/*
+// @include       http://netdna-storage.com/step/*
+// @run-at        document-start
 // ==/UserScript==
-var nextURL = document.getElementsByClassName("btn plan-footer-item")[0].href;
-window.location.href = nextURL;
+
+window.addEventListener('beforescriptexecute', function() {
+    var g = document.getElementsByClassName('plan-footer-item');
+    for (var i = 0; i < g.length; i++) {
+        if (g[i].getAttribute('data-href')) {
+            window.location = g[i].getAttribute('data-href');
+        }
+    }
+}, false);
