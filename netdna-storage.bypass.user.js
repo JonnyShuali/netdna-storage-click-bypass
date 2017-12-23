@@ -3,7 +3,7 @@
 // @namespace     https://github.com/JonnyShuali/netdna-storage-click-bypass
 // @description   Bypass the clicking on netdna-storage.
 // @updateURL     https://github.com/JonnyShuali/netdna-storage-click-bypass/raw/master/netdna-storage.bypass.user.js
-// @version       6
+// @version       7
 // @include       http://www.netdna-storage.com/f/*
 // @include       http://www.netdna-storage.com/step/*
 // @include       http://netdna-storage.com/f/*
@@ -13,12 +13,12 @@
 // @include       https://netdna-storage.com/f/*
 // @include       https://netdna-storage.com/step/*
 // @run-at        document-start
-// @grant         GM_xmlhttpRequest 
+// @grant         GM.xmlHttpRequest
 // ==/UserScript==
 
 
 
-GM_xmlhttpRequest({
+GM.xmlHttpRequest({
     method: 'GET',
     url: window.location.href,
     onload: function(response) {
